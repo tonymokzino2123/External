@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,156 +31,26 @@
         window.onbeforeunload = calculateTimeSpent;
     </script>
 </head>
-<body>
-    <h1>Game Selector</h1>
 
-    <form>
-        <label for="gameSelect">Select a game:</label>
-        <select id="gameSelect" name="game" onchange="runGame()">
-            <option value="/games/2048/index.html">2048</option>
-            <option value="/games/Buildbuild/index.html">DEFCON</option>
-            <option value="/games/CTR-Holiday-main/index.html">Cut The Rope - holiday</option>
-            <option value="/games/FBWG1-main/index.html">Fireboy & Watergirl 1</option>
-            <option value="/games/FBWG2-main/index.html">Fireboy & Watergirl 2</option>
-            <option value="/games/FBWG3-main/index.html">Fireboy & Watergirl 3</option>
-            <option value="/games/FBWG4-main/index.html">Fireboy & Watergirl 4</option>
-            <option value="/games/Snowbattle.io-main/index.html">SnowBattle.io</option>
-            <option value="/games/WebGL-Fluid-Simulation/index.html">Fluid Simulation</option>
-            <option value="/games/basketball-stars-main/index.html">Basketball Stars</option>
-            <option value="/games/bitlife/index.html">BitLife</option>
-            <option value="/games/cannonbasketball4-main/index.html">Cannon Basketball 4</option>
-            <option value="/games/chromedino/index.html">Offline Dino</option>
-            <option value="/games/cookieclicker-gh-pages/index.html">Cookie Clicker</option>
-            <option value="/games/dealornodeal-main/index.html">Deal Or No Deal</option>
-            <option value="/games/defendthetank-main/index.html">Defend The Tank</option>
-            <option value="/games/demon-main/index.html">Medival Battle 2P</option>
-            <option value="/games/dogeminer/index.html">Doge Miner</option>
-            <option value="/games/economical2/index.html">Economical 2</option>
-            <option value="/games/elasticman-main/index.html">Elastic Man</option>
-            <option value="/games/fnaf1/index.html">FNAF 1</option>
-            <option value="/games/fnaf2plswork-main/index.html">FNAF 2</option>
-            <option value="/games/fnaf3-main/index.html">FNAF 3</option>
-            <option value="/games/fnaf4/index.html">FNAF 4</option>
-            <option value="/games/getawayshootout-main/index.html">Getaway Shootout</option>
-            <option value="/games/hexgl-main/index.html">HexGL</option>
-            <option value="/games/jenga/Physijs/examples/jenga.html">Jenga</option>
-            <option value="/games/madalin-cars-multiplayer/index.html">Madalin's Stunt Cars</option>
-            <option value="/games/money/money.html">Spend Jeff Bezos Money</option>
-            <option value="/games/pocketleague-main/index.html">Pocket League 3D</option>
-            <option value="/games/ragdoll2p-main/index.html">Ragdoll 2P</option>
-            <option value="/games/retrobowl/index.html">Retrobowl</option>
-            <option value="/games/rolling%20sky/tmm-webgl-rollingsky/index.html">Rolling Sky</option>
-            <option value="/games/rooftop/index.html">Rooftop Snipers</option>
-            <option value="/games/rp5-main/index.html">Rally Point 5</option>
-            <option value="/games/sdfdshf-main/index.html">Poppy's Playtime</option>
-            <option value="/games/slope/index.html">Slope</option>
-            <option value="/games/squidgame-main/index.html">Squid G*me</option>
-            <option value="/games/stackbump3d/index.html">Stack Bump 3D</option>
-            <option value="/games/subwaymaybe/index.html">Subway Surfers</option>
-            <option value="/games/superhot/index.html">Superhot</option>
-            <option value="/games/tetris/index.html">Tetris</option>
-            <option value="/games/towerstack/tower.html">Towerstack</option>
-            <option value="/games/tpp2-main/index.html">Temple Run 2</option>
-            <option value="/games/vex3/index.html">Vex 3</option>
-            <option value="/games/vex4/index.html">Vex 4</option>
-            <option value="/games/vex5/index.html">Vex 5</option>
-            <option value="/games/vex6/index.html">Vex 6</option>
-            <option value="/games/vex7/index.html">Vex 7</option>
-            <option value="/games/motox3m-main/index.html">Moto X3M</option>
-            <option value="/games/motox3m2/index.html">MotoX3M 2</option>
-            <option value="/games/motox3m-pool/index.html">Moto X3M Pool Party</option>
-            <option value="/games/motox3m-spooky/index.html">Moto X3M Spooky Land</option>
-            <option value="/games/motox3m-winter/index.html">Moto X3M Winter</option>
-            <option value="/games/ducklife1/index.html">Duck Life 1</option>
-            <option value="/games/ducklife2/index.html">Duck Life 2</option>
-            <option value="/games/ducklife3/index.html">Duck Life 3</option>
-            <option value="/games/ducklife4/index.html">Duck Life 4</option>
-            <option value="/games/tactical-weapon-pack-2/index.html">Tactical Weapons Pack 2</option>
-            <option value="/games/worlds-hardest-game/index.html">Worlds Hardest Game 1</option>
-            <option value="/games/worlds-hardest-game-2/index.html">Worlds Hardest Game 2</option>
-            <option value="/games/stickman-hook/index.html">Stickman-Hook</option>
-            <option value="/games/drifthunters/index.html">Drift Hunters</option>
-            <option value="/games/funnyshooter/index.html">Funny Shooter</option>
-            <option value="/games/eatio/index.html">eat.io</option>
-            <option value="/games/dunkersfight/index.html">Dunkers Fight</option>
-            <option value="/games/jetpackjoyride/index.html">Jetpack Joyride</option>
-            <option value="/games/ballhop/index.html">Ball Hop</option>
-            <option value="/games/x-trial-racing/index.html">X-Trial-Racing</option>
-            <option value="/games/btd1/index.html">Bloons Tower Defense 1</option>
-            <option value="/games/btd2/index.html">Bloons Tower Defense 2</option>
-            <option value="/games/btd3/index.html">Bloons Tower Defense 3</option>
-            <option value="/games/btd4/index.html">Bloons Tower Defense 4</option>
-            <option value="/games/biters.io/index.html">biters.io</option>
-            <option value="/games/fliphero/index.html">Flip Hero</option>
-            <option value="/games/impossiblequiz1/index.html">Impossible Quiz 1</option>
-            <option value="/games/stickmanclimb2/index.html">Stickman Climb 2</option>
-            <option value="/games/soccerskills/index.html">Soccer Skills Euro Cup</option>
-            <option value="/games/burritobison/burrito-bison-ll.html">Burrito Bison</option>
-            <option value="/games/riddleschool/index.html">Riddle School Series</option>
-            <option value="/games/dbzd/index.html">Dragon Ball Devolution</option>
-            <option value="/games/sonicflash/index.html">Ultimate Flash Sonic</option>
-            <option value="/games/1v1lol/index.html">1v1.lol</option>
-            <option value="/games/webretro/index.html">Emulator</option>
-            <option value="/games/rocketleague/index.html">Rocket League</option>
-            <option value="/games/tunnelrush/index.html">Tunnel Rush</option>
-            <option value="/games/run3/index.html">Run 3</option>
-            <option value="/games/mc152/index.html">Minecraft 1.5.2</option>
-            <option value="/games/mc18/index.html">Minecraft 1.8</option>
-        </select>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Selector</title>
-
-    <script>
-        var startTime;
-
-        function runGame() {
-            var gameSelect = document.getElementById("gameSelect");
-            var selectedGame = gameSelect.options[gameSelect.selectedIndex].value;
-            window.location.href = selectedGame;
-        }
-
-        function startTrackingTime() {
-            startTime = new Date();
-        }
-
-        function calculateTimeSpent() {
-            if (startTime) {
-                var endTime = new Date();
-                var timeSpent = (endTime - startTime) / 1000; // in seconds
-                console.log("Time spent on the page: " + timeSpent + " seconds");
-            }
-        }
-
-        window.onload = startTrackingTime;
-        window.onbeforeunload = calculateTimeSpent;
-    </script>
-</head>
 <body>
     <h1>Game Selector</h1>
 
     <?php
-        session_start();
+    session_start();
 
-        if (isset($_SESSION['username'])) {
-            echo '<form>
+    if (isset($_SESSION['username'])) {
+        echo '<form>
                 <label for="gameSelect">Select a game:</label>
-                <select id="gameSelect" name="game" onchange="runGame()">
+                <select id="gameSelect" name="game">
                     <!-- Your game options here -->
                 </select>
                 <button type="button" onclick="runGame()">Play</button>
             </form>';
-        } else {
-            echo '<p>Please log in to access the games.</p>';
-            echo '<a href="login.php">Log in</a>';
-        }
+    } else {
+        echo '<p>Please log in to access the games.</p>';
+        echo '<a href="login.php">Log in</a>';
+    }
     ?>
-
 </body>
-</html>
 
-        <button type="button" onclick="runGame()">Play</button>
-    </form>
-</body>
 </html>
