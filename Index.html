@@ -126,6 +126,60 @@
             <option value="/games/mc152/index.html">Minecraft 1.5.2</option>
             <option value="/games/mc18/index.html">Minecraft 1.8</option>
         </select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+
+    <script>
+        var startTime;
+
+        function runGame() {
+            var gameSelect = document.getElementById("gameSelect");
+            var selectedGame = gameSelect.options[gameSelect.selectedIndex].value;
+            window.location.href = selectedGame;
+        }
+
+        function startTrackingTime() {
+            startTime = new Date();
+        }
+
+        function calculateTimeSpent() {
+            if (startTime) {
+                var endTime = new Date();
+                var timeSpent = (endTime - startTime) / 1000; // in seconds
+                console.log("Time spent on the page: " + timeSpent + " seconds");
+            }
+        }
+
+        window.onload = startTrackingTime;
+        window.onbeforeunload = calculateTimeSpent;
+    </script>
+</head>
+<body>
+    <h1>Game Selector</h1>
+
+    <?php
+        session_start();
+
+        if (isset($_SESSION['username'])) {
+            echo '<form>
+                <label for="gameSelect">Select a game:</label>
+                <select id="gameSelect" name="game" onchange="runGame()">
+                    <!-- Your game options here -->
+                </select>
+                <button type="button" onclick="runGame()">Play</button>
+            </form>';
+        } else {
+            echo '<p>Please log in to access the games.</p>';
+            echo '<a href="login.php">Log in</a>';
+        }
+    ?>
+
+</body>
+</html>
 
         <button type="button" onclick="runGame()">Play</button>
     </form>
